@@ -16,12 +16,10 @@ print("\nExc 1: Print the current working directory, completed with os.getcwd() 
 print(f"Current working directory: {os.getcwd()}\n")
 print("Exc 2:Change the working directory to the parent directory and print the new working directory.\n")
 
-# From documentation:
-    # os.fchdir(fd)
 
-    # Change the current working directory to the directory represented by the file descriptor fd.
-    # The descriptor must refer to an opened directory,not an open file.
-    # As of Python 3.3, this is equivalent to os.chdir(fd).
+# Syntax: os.chdir(path)
+# path: A complete path of directory to be changed to new directory path.
+# Returns: Doesn’t return any value
     
 os.chdir("../")
 print("Directory changed with os.chdir\n")

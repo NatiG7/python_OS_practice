@@ -20,8 +20,11 @@ print("\nExc 2: Delete file3.txt and file4.txt")
 print("\n\tFor this exercise use os.remove()")
 print(f"\nCurrent files : {files_and_dirs}\n")
 print("\n\tRunning os.remove() on file3 and file4")
-os.remove("file3.txt")
-os.remove("file4.txt")
+
+if os.path.exists("file3.txt"):
+    os.remove("file3.txt")
+if os.path.exists("file4.txt"):
+    os.remove("file4.txt")
 
 # After os.{action}, methods such as listdir need to be run again
 # to fetch updated directory/file contents.

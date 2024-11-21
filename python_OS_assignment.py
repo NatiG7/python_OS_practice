@@ -8,9 +8,7 @@ files_to_create = ['fileA.txt','fileB.txt','fileC.txt']
 
 # Check if directory exists, if not create it
 
-if directory_to_create:
-    pass
-elif not directory_to_create:
+if not os.path.exists(directory_to_create):
     os.mkdir(directory_to_create)
 
 # Move to the created directory
@@ -33,7 +31,7 @@ files_in_directory = os.listdir(directory_to_create)
 
 # Iterate each and retrieve abspath.
 for file in files_in_directory:
-    print(f"{file} Absolute Path : {os.path.abspath(file)}")
+    print(f"{file} Absolute Path : {os.path.abspath(os.path.join(directory_to_create, file))}")
 
 # Split fileA abspath into componenets
 
